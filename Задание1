@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+   short a = 6;
+   float b = 10.75;
+   int c = 39;
+   double d = 3.8456;
+   int ac = a + c;
+   printf ("Сумма первого и третьего числа равна %d \n", ac);
+   float cd = b - d;
+   printf ("Разность второго и четвертого числа равна %f \n", cd);
+   double ad = a / d;
+    printf ("Деление первого и четвертого числа равно %lf \n", ad);
+   --d;
+   printf ("Уменьшенное четвертое число на единицу равно %lf \n", d);
+
+    return 0;
+}
