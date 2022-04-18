@@ -1,0 +1,34 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+int A, B, c, d, i;
+while(i!=1){;
+cout << "A";
+cin>>A;
+cout<<"B";
+cin>>B;
+c = A;
+d = B;
+if(A<B){
+    i=1;
+}
+}
+ofstream file("output");
+for (A; A<=B;A++){
+    //cout<<A*3<<"\n";//
+    file<<A*3<<"\n";
+}
+file.close();
+    ifstream file1("output");
+    for(c;c<=d;c++){
+    file1>>A;
+    cout<<"A:"<<A*3<<"\n";
+    }
+file1.close();
+return 0;
+}
