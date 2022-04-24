@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std ;
+
+void sorting(int ar[], int l) {
+  for (int i = 0; i < l - 1; i++) {
+    int j=i+1;
+    while(j<l) {
+      if (ar[i] < ar[j]) {
+        int c = ar[j];
+        ar[j] = ar[i];
+        ar[i] = c;
+      }
+      j++;
+    }
+  }
+}
+int main () {
+  int l = 10;
+  int numArr[l]= {34, 67, 9, 54, 32, 59, 45, 156, 30, 12};
+  sorting(numArr, l);
+  for (int k = 0; k < l; k++ ) {
+    cout << numArr[k] << ' ';
+  }
+  return 0;
+  }

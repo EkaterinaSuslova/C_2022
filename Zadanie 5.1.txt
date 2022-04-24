@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <iostream>
+
+using namespace std ;
+
+double sqrt (double a, double b) {
+  double i=a*a;
+  double j=b*b;
+  double summa=i+j;
+  return summa;
+}
+
+int main () {
+  double c, d, s;
+  c=4;
+  d=3;
+  cout << "Число " << c << '\n';
+  cout << "Число " << d << '\n';
+  s=sqrt(c,d);
+  cout << "Сумма квадратов двух чисел: " << s << '\n';
+  return 0;
+  }

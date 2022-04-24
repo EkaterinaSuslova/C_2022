@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std ;
+
+int main() {
+  int sum=0;
+for (int j=1; j<1000; j=j+4){
+  if (j%7==0) {
+    sum=sum+j;
+  }
+  if (j%7>0) {
+    continue;
+  }
+}
+cout << "Сумма чисел "<< sum <<'\n';
+return 0;
+}

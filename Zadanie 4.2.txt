@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main () {
+  char s[150];
+  cout << "Ввод строки" << "\n";
+  cin >> s;
+  char *r;
+  r = s;
+do{
+  int i = int(*r) + 1;
+  i = char(i);
+  *r = i;
+  r++;
+}while(*r);
+   cout << "Преобразованная строка:" << s << "\n";
+  return 0;
+}

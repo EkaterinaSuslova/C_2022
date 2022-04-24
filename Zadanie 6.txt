@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <iostream>
+
+using namespace std ;
+
+class Bucket {
+  public:
+    int volume;
+    int used;
+    Bucket(int u, int v) {
+      volume = u;
+      used = v;
+    }
+    void flush();
+    int fill(int l);
+
+};
+
+void Bucket::flush() {
+  used = 0;
+}
+
+int Bucket::fill(int a) {
+  if (a > volume - used) {
+    used = volume;
+    int z = a - used;
+    cout << z << " литров лишние"<<"\n";
+    return z;
+  };
+  if (a<volume - used) {
+    used = used + a;
+  }
+  return 0;
+}
+
+int main () {
+  Bucket blackBucket(19, 0);
+  cout << "Наливаем 26 литров в ведро объемом - " << blackBucket.volume << "\n";
+  blackBucket.fill(26);
+  cout << "Опустошаем ведро" << "\n";
+  blackBucket.flush();
+  cout << "Воды в ведре " << blackBucket.used << "\n";
+  return 0;
+  }
